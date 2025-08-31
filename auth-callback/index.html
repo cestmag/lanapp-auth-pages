@@ -1,1 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Auth Callback</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>code{white-space:pre-wrap;word-break:break-all}</style>
+</head>
+<body>
+  <h1>Auth Callback</h1>
+  <p>クエリパラメータを下に表示します（デバッグ用）。</p>
+  <code id="out"></code>
+  <script>
+    const u = new URL(location.href);
+    const obj = {};
+    u.searchParams.forEach((v,k)=>{ if(!obj[k]) obj[k]=[]; obj[k].push(v); });
+    document.getElementById('out').textContent = JSON.stringify({
+      href: location.href,
+      path: location.pathname,
+      params: obj
+    }, null, 2);
+  </script>
+</body>
+</html>
 
