@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.example.yourapp", 
+      "package_name": "com.websarva.wings.android.wordmemorizz", 
       "sha256_cert_fingerprints": [
           "C1:7A:36:6A:5C:F0:68:77:D9:7D:CD:F9:55:7B:27:3C:90:C3:7E:1F:F5:56:55:30:6F:92:55:78:96:F3:17:C7"
       ]
