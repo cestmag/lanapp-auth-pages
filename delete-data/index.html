@@ -22,6 +22,7 @@
       line-height: 1.65;
       color: var(--text);
       background: var(--bg);
+      font-size: 1.0625rem;
     }
     h1, h2, p, ul {
       margin: 0 0 1rem;
@@ -36,6 +37,14 @@
     ul { padding-left: 2rem; }
     a { color: var(--accent); font-weight: 600; }
     code, kbd { background:#e2e8f0; padding:0 .25em; border-radius:4px; }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.75rem; }
+      h1, h2, p, ul { padding: 1rem; border-radius: 12px; }
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.35rem; }
+      ul { padding-left: 2rem; }
+      a { overflow-wrap: anywhere; }
+    }
   </style>
 </head>
 <body>

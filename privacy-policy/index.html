@@ -23,6 +23,7 @@
       line-height: 1.7;
       color: var(--text);
       background: var(--bg);
+      font-size: 1.0625rem;
     }
     h1, h2, h3, p, ul, hr {
       margin-top: 0;
@@ -39,6 +40,15 @@
     a { word-break: break-all; color: var(--accent); }
     ul { margin-left: 0; padding-left: 2.2rem; }
     hr { border-style: solid; }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.75rem; }
+      h1, h2, h3, p, ul, hr { padding: 1rem; border-radius: 12px; }
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.35rem; }
+      h3 { font-size: 1.15rem; }
+      ul { padding-left: 2rem; }
+      a { overflow-wrap: anywhere; }
+    }
   </style>
 </head>
 <body>
