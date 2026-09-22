@@ -24,6 +24,7 @@
       display: grid;
       gap: 1rem;
       place-content: start center;
+      font-size: 1.0625rem;
     }
     h1, p, code {
       width: min(860px, 100%);
@@ -45,6 +46,12 @@
       border-color: rgba(148, 163, 184, 0.25);
       font-size: 0.92rem;
       line-height: 1.55;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.75rem; }
+      h1 { font-size: 1.75rem; }
+      h1, p, code { padding: 1rem; border-radius: 12px; }
+      code { font-size: 1rem; }
     }
   </style>
 </head>
