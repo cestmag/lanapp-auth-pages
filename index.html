@@ -26,7 +26,7 @@
     place-items: center;
     font-size: 1.0625rem;
   }
-  h1, ul {
+  h1, nav {
     width: min(760px, 100%);
   }
   h1 {
@@ -34,24 +34,38 @@
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     letter-spacing: -0.02em;
   }
-  ul {
+  nav {
     margin: 0;
     padding: 1rem;
-    list-style-position: inside;
     border: 1px solid var(--border);
     border-radius: 18px;
     background: var(--card);
     backdrop-filter: blur(10px);
     box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
-    line-height: 1.8;
+  }
+  ul {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
   a {
-    color: var(--accent);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    color: #fff;
+    background: var(--accent);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
-  a:hover {
-    color: var(--accent-soft);
+  a:hover, a:focus-visible {
+    background: var(--accent-soft);
+    box-shadow: 0 6px 14px rgba(79, 70, 229, 0.28);
+    transform: translateY(-1px);
   }
   @media (max-width: 600px) {
     body {
@@ -59,23 +73,24 @@
       place-items: start stretch;
     }
     h1 { font-size: 1.75rem; }
-    ul {
+    nav {
       padding: 1rem 1.1rem;
-      line-height: 2;
     }
-    a { display: inline-block; min-height: 44px; }
+    a { min-height: 44px; }
   }
 </style>
 </head>
 <body>
   <h1>lanapp-auth-pages!</h1>
-  <ul>
-    <li><a href="./confirmed/">confirmed/</a></li>
-    <li><a href="./auth-callback/">auth-callback/</a></li>
-    <li><a href="./.well-known/assetlinks.json">.well-known/assetlinks.json</a></li>
-    <li><a href="./delete-account/">delete-account</a></li>
-    <li><a href="./delete-data/">delete-data</a></li>
-    <li><a href="./privacy-policy/">privacy-policy</a></li>
-  </ul>
+  <nav aria-label="関連ページ">
+    <ul>
+      <li><a href="./confirmed/">認証完了ページ</a></li>
+      <li><a href="./auth-callback/">認証コールバック</a></li>
+      <li><a href="./.well-known/assetlinks.json">Android アプリリンク設定</a></li>
+      <li><a href="./delete-account/">アカウントデータ削除の仕方</a></li>
+      <li><a href="./delete-data/">データ削除について</a></li>
+      <li><a href="./privacy-policy/">プライバシーポリシー</a></li>
+    </ul>
+  </nav>
 </body>
 </html>
