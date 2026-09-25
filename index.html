@@ -23,6 +23,8 @@
     color: var(--text);
     background: var(--bg);
     font-size: 1.0625rem;
+    display: flex;
+    flex-direction: column;
   }
   main {
     width: min(880px, 100%);
@@ -104,6 +106,13 @@
   }
   nav a:hover,
   nav a:focus-visible { color: var(--accent-soft); }
+  footer {
+    margin-top: auto;
+    padding-top: 2.5rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+    text-align: center;
+  }
   @media (max-width: 700px) {
     body { padding: 2.5rem 1rem; }
     header { margin-bottom: 1.75rem; }
@@ -146,5 +155,6 @@
       </ul>
     </nav>
   </main>
+  <footer>© 2026 Lanpraque. All Rights Reserved.</footer>
 </body>
 </html>

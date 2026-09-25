@@ -23,6 +23,8 @@
       color: var(--text);
       background: var(--bg);
       font-size: 1.0625rem;
+      display: flex;
+      flex-direction: column;
     }
     main {
       margin: 0 0 1rem;
@@ -37,6 +39,13 @@
     ol { margin: 1.5rem 0 0; padding-left: 1.75rem; }
     li { margin-top: 0.75rem; padding-left: 0.25rem; }
     li::marker { color: var(--danger); font-weight: 700; }
+    footer {
+      margin-top: auto;
+      padding-top: 1.5rem;
+      color: #475569;
+      font-size: 0.875rem;
+      text-align: center;
+    }
     @media (max-width: 600px) {
       body { padding: 1rem 0.75rem; }
       main { padding: 1rem; border-radius: 12px; }
@@ -54,5 +63,6 @@
       <li>画面の指示に従って、アカウントとユーザーデータを削除します。</li>
     </ol>
   </main>
+  <footer>© 2026 Lanpraque. All Rights Reserved.</footer>
 </body>
 </html>
